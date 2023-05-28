@@ -1,19 +1,20 @@
-import {Serie} from "./serie.js"
+import { Serie } from "./serie.js";
 
-export class Persona{
-    foto: string;
-    descripcion: string;
-    nombre: string;
-    rol: "Actor" | "Director"
-    series: Serie[]
+export class Persona {
+  nombre: string;
+  foto: string;
+  descripcion: string;
+  listado_series: Serie[];
 
-
-    constructor(foto: string, descripcion: string, nombre: string, rol:"Actor" | "Director"){
-        this.foto = foto;
-        this.descripcion = descripcion;
-        this.nombre = nombre
-        this.rol = rol
-        this.series = []
-    }
-
+  constructor(
+    nombre: string,
+    foto: string,
+    descripcion: string,
+    listado_series: Serie[]
+  ) {
+    this.nombre = nombre;
+    this.foto = foto;
+    this.descripcion = descripcion;
+    this.listado_series = listado_series;
+  }
 }
